@@ -1,7 +1,7 @@
 // it can be used just like useState, but it will persist data to localStorage
 import { useState } from 'react';
 
-export const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key, initialValue) => {
   // define some state --> will receive an initial value to set up our localStorage property
   const item = JSON.parse(localStorage.getItem(key));
 
@@ -16,6 +16,6 @@ export const useLocalStorage = (key, initialValue) => {
   return [storedValue, setValue];
 };
 
-
+export default useLocalStorage;
 
 
